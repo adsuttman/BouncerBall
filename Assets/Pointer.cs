@@ -6,9 +6,10 @@ public class Pointer : MonoBehaviour
 {
     GameObject obj;
     public GameObject[] balls;
-    float shoveForce = 100;
-    float shoveDelay = 15;
+    public float shoveForce = 10;
+    public float shoveDelay = 15;
     float shoveTimer = 0;
+    public LayerMask shoveLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,9 @@ public class Pointer : MonoBehaviour
         //sets position of pointer to position of mouse
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
-        obj.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 newPos = Camera.main.ScreenToWorldPoint(mousePos);
+        newPos.z = 0;
+        obj.transform.position = newPos;
 
 
         if (Input.GetButtonDown("Fire1") && shoveTimer <= 0)
@@ -30,13 +33,15 @@ public class Pointer : MonoBehaviour
             foreach (GameObject ball in balls)
             {
                 Vector3 direction = ball.transform.position - obj.transform.position;
-                float distance = direction.magnitude;
-                if (distance < 10)
+/*                float distance = direction.magnitude;
+*/                Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
+                if (rigid.IsTouchingLayers(shoveLayer))
                 {
-                    ball.GetComponent<Rigidbody2D>().AddForce(direction.normalized * shoveForce, ForceMode2D.Impulse);
+                    rigid.AddForce(direction.normalized * shoveForce, ForceMode2D.Impulse);
+                    shoveTimer = shoveDelay;
+
                 }
             }
-            shoveTimer = shoveDelay;
         }
         shoveTimer -= 1;
     }
