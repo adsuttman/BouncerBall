@@ -861,5 +861,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 8656718722589302702, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
