@@ -44,6 +44,19 @@ public class Pointer : MonoBehaviour
                 }
             }
         }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            foreach (GameObject ball in balls)
+            {
+                Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
+                if (rigid.IsTouchingLayers(shoveLayer))
+                {
+                    rigid.velocity = Vector2.zero;
+                    rigid.angularVelocity = 0;
+
+                }
+            }
+        }
         if (shoveTimer > 0) shoveTimer--;
     }
 }
