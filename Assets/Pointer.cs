@@ -28,13 +28,14 @@ public class Pointer : MonoBehaviour
         obj.transform.position = newPos;
 
 
-        if (Input.GetButtonDown("Fire1") && shoveTimer <= 0)
+        if (Input.GetButtonDown("Fire1") && shoveTimer == 0)
         {
             foreach (GameObject ball in balls)
             {
                 Vector3 direction = ball.transform.position - obj.transform.position;
-/*                float distance = direction.magnitude;
-*/                Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
+                /*                float distance = direction.magnitude;
+                */
+                Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
                 if (rigid.IsTouchingLayers(shoveLayer))
                 {
                     rigid.AddForce(direction.normalized * shoveForce, ForceMode2D.Impulse);
@@ -43,7 +44,6 @@ public class Pointer : MonoBehaviour
                 }
             }
         }
-        shoveTimer -= 1;
+        if (shoveTimer > 0) shoveTimer--;
     }
-
 }
