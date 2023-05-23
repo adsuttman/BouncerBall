@@ -7,16 +7,23 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Pointer script;
+    Rigidbody2D rigid;
+    bool speeding = false;
     void Start()
     {
         GameObject pointer = GameObject.Find("Pointer");
-        Pointer script = pointer.GetComponent<Pointer>();
+        script = pointer.GetComponent<Pointer>();
         ArrayUtility.Add<GameObject>(ref script.balls, gameObject);
+
+        rigid = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        float speed = rigid.velocity.sqrMagnitude / 200;
+        print(speed);
+        speeding = speed > 1;
     }
 }
