@@ -725,6 +725,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6075106665790112998}
     m_Modifications:
+    - target: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 4263173720116112039}
     - target: {fileID: 8656718722589302699, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -791,6 +795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
+--- !u!198 &4263173720116112039 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1676499501654156099, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
+  m_PrefabInstance: {fileID: 3201437575419660772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6075106666025752143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8656718722589302699, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}

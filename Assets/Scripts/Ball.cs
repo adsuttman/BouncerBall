@@ -9,7 +9,8 @@ public class Ball : MonoBehaviour
 {
     Pointer script;
     Rigidbody2D rigid;
-    bool speeding = false;
+    public bool speeding = false;
+    public ParticleSystem particles;
     void Start()
     {
         GameObject pointer = GameObject.Find("Pointer");
@@ -19,11 +20,14 @@ public class Ball : MonoBehaviour
         rigid = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         float speed = rigid.velocity.sqrMagnitude / 200;
-        print(speed);
         speeding = speed > 1;
+        if (speeding)
+        {
+            particles.Emit(Mathf.FloorToInt(speed));
+        }
     }
 }
