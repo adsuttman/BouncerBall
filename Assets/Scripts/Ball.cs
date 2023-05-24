@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     Rigidbody2D rigid;
     public bool speeding = false;
     public ParticleSystem particles;
+    public float speedingFactor = 300;
     void Start()
     {
         GameObject pointer = GameObject.Find("Pointer");
@@ -23,7 +24,7 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-        float speed = rigid.velocity.sqrMagnitude / 200;
+        float speed = rigid.velocity.sqrMagnitude / speedingFactor;
         speeding = speed > 1;
         if (speeding)
         {
