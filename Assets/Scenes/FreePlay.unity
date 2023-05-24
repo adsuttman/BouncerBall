@@ -187,5 +187,9 @@ PrefabInstance:
       propertyPath: particles
       value: 
       objectReference: {fileID: 434737566}
+    - target: {fileID: 6075106666105926883, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}

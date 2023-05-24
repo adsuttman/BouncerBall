@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pointer : MonoBehaviour
 {
@@ -10,11 +11,17 @@ public class Pointer : MonoBehaviour
     public float shoveDelay = 15;
     float shoveTimer = 0;
     public LayerMask shoveLayer;
+    public Image charge;
+    public float maxSpeedpoints = 100;
+    float speedpoints;
+    public Color positive;
+    public Color negative;
 
     // Start is called before the first frame update
     void Start()
     {
         obj = gameObject;
+        speedpoints = 0;
     }
 
     // Update is called once per frame
@@ -49,14 +56,48 @@ public class Pointer : MonoBehaviour
             foreach (GameObject ball in balls)
             {
                 Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
-                if (rigid.IsTouchingLayers(shoveLayer))
+                if (rigid.IsTouchingLayers(shoveLayer) && speedpoints == maxSpeedpoints)
                 {
                     rigid.velocity = Vector2.zero;
                     rigid.angularVelocity = 0;
+                    UpdateSpeedpoints(0);
 
                 }
             }
         }
         if (shoveTimer > 0) shoveTimer--;
+    }
+    void FixedUpdate()
+    {
+        foreach (GameObject ballObj in balls)
+        {
+            Ball ball = ballObj.GetComponent<Ball>();
+            if (ball.speeding)
+            {
+                UpdateSpeedpoints(speedpoints + 1);
+            }
+        }
+    }
+
+    void UpdateCharge()
+    {
+        charge.fillAmount = speedpoints/maxSpeedpoints;
+        if (speedpoints == maxSpeedpoints) {
+            charge.color = positive;
+        } else
+        {
+            charge.color = negative;
+        }
+    }
+
+    void UpdateSpeedpoints(float points)
+    {
+        if (speedpoints == maxSpeedpoints && points != 0)
+        {
+            return;
+        }
+        speedpoints = points;
+        Mathf.Clamp(speedpoints, 0, maxSpeedpoints);
+        UpdateCharge();
     }
 }
