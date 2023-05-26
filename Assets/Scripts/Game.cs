@@ -9,7 +9,13 @@ public class Game : MonoBehaviour
     void Start()
     {
         Floor.OnFloorCollided += Floor_OnFloorCollided;
+        Pointer.AllBallsDisabled += Pointer_AllBallsDisabled;
         
+    }
+
+    private void Pointer_AllBallsDisabled()
+    {
+        print("Game Over");
     }
 
     private void Floor_OnFloorCollided(GameObject obj)

@@ -21,7 +21,10 @@ public class Ball : MonoBehaviour
         rigid = gameObject.GetComponent<Rigidbody2D>();
     }
 
-
+    private void OnDisable()
+    {
+        script.CheckBalls();
+    }
     void FixedUpdate()
     {
         float speed = rigid.velocity.sqrMagnitude / speedingFactor;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class Pointer : MonoBehaviour
     public Color positive;
     public Color negative;
 
+    public static event Action AllBallsDisabled;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class Pointer : MonoBehaviour
         {
             foreach (GameObject ball in balls)
             {
+                if (!ball.activeSelf) continue;
                 Vector3 direction = ball.transform.position - obj.transform.position;
                 /*                float distance = direction.magnitude;
                 */
@@ -55,6 +58,7 @@ public class Pointer : MonoBehaviour
         {
             foreach (GameObject ball in balls)
             {
+                if (!ball.activeSelf) continue;
                 Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
                 if (rigid.IsTouchingLayers(shoveLayer) && speedpoints == maxSpeedpoints)
                 {
@@ -100,4 +104,20 @@ public class Pointer : MonoBehaviour
         Mathf.Clamp(speedpoints, 0, maxSpeedpoints);
         UpdateCharge();
     }
+    public void CheckBalls()
+    {
+        int inactiveCount = 0;
+        foreach (GameObject ball in balls)
+        {
+            if (!ball.activeSelf)
+            {
+                inactiveCount++;
+            }
+        }
+        if (inactiveCount == balls.Length)
+        {
+            AllBallsDisabled();
+        }
+    }
+
 }
