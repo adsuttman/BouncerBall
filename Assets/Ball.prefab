@@ -113,7 +113,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8656718722589302702}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speeding: 0
   particles: {fileID: 1676499501654156099}
+  speedingFactor: 300
 --- !u!1 &9073338243965975701
 GameObject:
   m_ObjectHideFlags: 0

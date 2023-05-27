@@ -46,6 +46,7 @@ public class Pointer : MonoBehaviour
                 /*                float distance = direction.magnitude;
                 */
                 Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
+                rigid.simulated = true;
                 if (rigid.IsTouchingLayers(shoveLayer))
                 {
                     rigid.AddForce(direction.normalized * shoveForce, ForceMode2D.Impulse);
