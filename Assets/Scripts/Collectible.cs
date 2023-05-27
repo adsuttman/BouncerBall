@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Collectible : MonoBehaviour
     new Collider2D collider;
     public LayerMask ballLayer;
     public GameObject effectArea;
+    public event Action collected;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class Collectible : MonoBehaviour
     void onBallCollision()
     {
         print("collected");
+        collected();
         GameObject inst = Instantiate(effectArea);
         inst.transform.position = transform.position;
         Destroy(gameObject);

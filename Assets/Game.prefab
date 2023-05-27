@@ -471,6 +471,10 @@ MonoBehaviour:
   loseable: 0
   spawnCollectibles: 0
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
+  minSpawnX: -8
+  maxSpawnX: 8
+  minSpawnY: -2
+  maxSpawnY: 4
 --- !u!1 &6075106666023592353
 GameObject:
   m_ObjectHideFlags: 0
