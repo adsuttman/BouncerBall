@@ -11,12 +11,14 @@ public class GameMode : MonoBehaviour
     public float maxSpawnX = 8.5f;
     public float minSpawnY = -4.5f;
     public float maxSpawnY = 4.5f;
+    public Ball ball;
     // Start is called before the first frame update
     void Start()
     {
         Floor.OnFloorCollided += Floor_OnFloorCollided;
         Pointer.AllBallsDisabled += Pointer_AllBallsDisabled;
         SpawnCollectible();
+        SpawnBall(Vector3.zero);
         
     }
 
@@ -42,6 +44,16 @@ public class GameMode : MonoBehaviour
             inst.collected += OnCollected;
             inst.transform.position = new Vector3(randx, randy);
         }
+    }
+    void SpawnBall(Vector3 spawnPosition, bool serving = true)
+    {
+        Ball inst = Instantiate(ball);
+        inst.transform.position = spawnPosition;
+        if (!serving)
+        {
+            inst.GetComponent<Rigidbody2D>().simulated = true;
+        }
+
     }
     void OnCollected()
     {
