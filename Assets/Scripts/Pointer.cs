@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Pointer : MonoBehaviour
 {
     GameObject obj;
-    public GameObject[] balls;
+    public Ball[] balls;
     public float shoveForce = 10;
     public float shoveDelay = 15;
     float shoveTimer = 0;
@@ -39,14 +39,14 @@ public class Pointer : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && shoveTimer == 0)
         {
-            foreach (GameObject ball in balls)
+            foreach (Ball ball in balls)
             {
-                if (!ball.activeSelf) continue;
+                if (!ball.isActiveAndEnabled) continue;
                 Vector3 direction = ball.transform.position - obj.transform.position;
                 /*                float distance = direction.magnitude;
                 */
-                Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
-                rigid.simulated = true;
+                Rigidbody2D rigid = ball.rigid;
+                ball.Activate();
                 if (rigid.IsTouchingLayers(shoveLayer))
                 {
                     rigid.AddForce(direction.normalized * shoveForce, ForceMode2D.Impulse);
@@ -57,10 +57,10 @@ public class Pointer : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            foreach (GameObject ball in balls)
+            foreach (Ball ball in balls)
             {
-                if (!ball.activeSelf) continue;
-                Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
+                if (!ball.isActiveAndEnabled) continue;
+                Rigidbody2D rigid = ball.rigid;
                 if (rigid.IsTouchingLayers(shoveLayer) && speedpoints == maxSpeedpoints)
                 {
                     rigid.velocity = Vector2.zero;
@@ -74,9 +74,8 @@ public class Pointer : MonoBehaviour
     }
     void FixedUpdate()
     {
-        foreach (GameObject ballObj in balls)
+        foreach (Ball ball in balls)
         {
-            Ball ball = ballObj.GetComponent<Ball>();
             if (ball.speeding)
             {
                 UpdateSpeedpoints(speedpoints + 1);
@@ -108,9 +107,9 @@ public class Pointer : MonoBehaviour
     public void CheckBalls()
     {
         int inactiveCount = 0;
-        foreach (GameObject ball in balls)
+        foreach (Ball ball in balls)
         {
-            if (!ball.activeSelf)
+            if (!ball.isActiveAndEnabled)
             {
                 inactiveCount++;
             }

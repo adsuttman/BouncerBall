@@ -8,15 +8,16 @@ using UnityEngine.SceneManagement;
 public class Ball : MonoBehaviour
 {
     Pointer script;
-    Rigidbody2D rigid;
+    public Rigidbody2D rigid;
     public bool speeding = false;
     public ParticleSystem particles;
     public float speedingFactor = 300;
+    public static event Action Activated;
     void Start()
     {
         GameObject pointer = GameObject.Find("Pointer");
         script = pointer.GetComponent<Pointer>();
-        ArrayUtility.Add<GameObject>(ref script.balls, gameObject);
+        ArrayUtility.Add(ref script.balls, this);
 
         rigid = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -32,6 +33,14 @@ public class Ball : MonoBehaviour
         if (speeding)
         {
             particles.Emit(Mathf.FloorToInt(speed));
+        }
+    }
+    public void Activate()
+    {
+        if (!rigid.simulated)
+        {
+            rigid.simulated = true;
+            Activated();
         }
     }
 }

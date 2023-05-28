@@ -17,9 +17,15 @@ public class GameMode : MonoBehaviour
     {
         Floor.OnFloorCollided += Floor_OnFloorCollided;
         Pointer.AllBallsDisabled += Pointer_AllBallsDisabled;
+        Ball.Activated += Ball_Activated;
         SpawnCollectible();
         SpawnBall(Vector3.zero);
         
+    }
+
+    public virtual void Ball_Activated()
+    {
+        print("Ball Activated");
     }
 
     private void Pointer_AllBallsDisabled()
