@@ -79,12 +79,21 @@ public class GameMode : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("Jump"))
         {
             ReloadScene();
+        }
+        if (Input.GetButton("Cancel"))
+        {
+            ReturnToMainMenu();
         }
     }
 
