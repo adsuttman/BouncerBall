@@ -34,7 +34,7 @@ public class GameMode : MonoBehaviour
         }
     }
 
-    void SpawnCollectible()
+    protected void SpawnCollectible()
     {
         if (spawnCollectibles)
         {

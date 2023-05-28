@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FreePlay.unity
     guid: ac3ae3d3bad9f744e96d09a31b4ca89d
+  - enabled: 1
+    path: Assets/Scenes/ScoreMode.unity
+    guid: 3d96032215864f341ad740cb63e5c002
   m_configObjects: {}
