@@ -1318,7 +1318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720575055327005179, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3720575055327005179, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1330,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720575055327005179, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: GoToScene
       objectReference: {fileID: 0}
     - target: {fileID: 3720575055327005179, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1338,11 +1338,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720575055327005179, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 
+      value: ScoreMode
       objectReference: {fileID: 0}
     - target: {fileID: 4505607046481332858, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_Name
       value: ScoreMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529035115101551083, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
+      propertyPath: m_text
+      value: Score Mode
       objectReference: {fileID: 0}
     - target: {fileID: 7529035115101551083, guid: d31c5d6e13f2c784eb37690dcf8ac7ed, type: 3}
       propertyPath: m_fontSize
