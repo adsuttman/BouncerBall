@@ -7,10 +7,10 @@ public class GameMode : MonoBehaviour
     public bool loseable = false;
     public bool spawnCollectibles = false;
     public Collectible collectible;
-    public float minSpawnX = -8.5f;
-    public float maxSpawnX = 8.5f;
-    public float minSpawnY = -4.5f;
-    public float maxSpawnY = 4.5f;
+    public float minSpawnX = -8f;
+    public float maxSpawnX = 8f;
+    public float minSpawnY = -2f;
+    public float maxSpawnY = 4f;
     public Ball ball;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class GameMode : MonoBehaviour
 
     private void Pointer_AllBallsDisabled()
     {
-        print("Game Over");
+        GameOver();
     }
 
     private void Floor_OnFloorCollided(GameObject obj)
@@ -55,12 +55,17 @@ public class GameMode : MonoBehaviour
         }
 
     }
-    void OnCollected()
+    virtual public void OnCollected()
     {
         if (spawnCollectibles)
         {
             SpawnCollectible();
         }
+    }
+
+    virtual public void GameOver()
+    {
+        print("Game Over");
     }
 
     // Update is called once per frame
