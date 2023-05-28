@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScoreFrenzyMode.unity
     guid: 1e4981a66b749fb45b6de7fc0c992f3a
+  - enabled: 1
+    path: Assets/Scenes/TimerMode.unity
+    guid: 692d4741725677c49a40ae4eadf80970
   m_configObjects: {}
