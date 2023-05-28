@@ -222,4 +222,4 @@ MonoBehaviour:
   minSpawnY: -3
   maxSpawnY: 4
   ball: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
-  bonusInterval: 1
+  bonusInterval: 5
