@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TimerMode.unity
     guid: 692d4741725677c49a40ae4eadf80970
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: be2bd5c53edbded4f80d024b41c4de4e
   m_configObjects: {}
