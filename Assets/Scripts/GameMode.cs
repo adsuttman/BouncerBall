@@ -7,12 +7,13 @@ public class GameMode : MonoBehaviour
 {
     public bool loseable = false;
     public bool spawnCollectibles = false;
+    public Ball ball;
+    [Header("Collectible Settings")]
     public Collectible collectible;
     public float minSpawnX = -8f;
     public float maxSpawnX = 8f;
     public float minSpawnY = -2f;
     public float maxSpawnY = 4f;
-    public Ball ball;
     // Start is called before the first frame update
     void Start()
     {
