@@ -8,9 +8,9 @@ public class ScoreFrenzyMode : ScoreMode
     bool bonusEnabled = false;
     IEnumerator timer;
 
-    public override void OnCollected()
+    public override void Ball_Activated()
     {
-        base.OnCollected();
+        base.Ball_Activated();
         if (!bonusEnabled)
         {
             timer = BonusTimer();
@@ -22,7 +22,7 @@ public class ScoreFrenzyMode : ScoreMode
 
     public override void GameOver()
     {
-        StopCoroutine(timer);
+        if (timer != null) StopCoroutine(timer);
         base.GameOver();
     }
     IEnumerator BonusTimer()
