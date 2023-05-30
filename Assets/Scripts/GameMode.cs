@@ -12,6 +12,7 @@ public class GameMode : MonoBehaviour
     public GameObject pointer;
     public ScoreDisplay scoreDisplay;
     public CanvasGroup tutorialText;
+    public ParticleSystem ballDestroyParticles;
     [Header("Collectible Settings")]
     public Collectible collectible;
     public float minSpawnX = -8f;
@@ -50,6 +51,8 @@ public class GameMode : MonoBehaviour
     private void Floor_OnFloorCollided(GameObject obj)
     {
         if (loseable) {
+            var inst = Instantiate(ballDestroyParticles);
+            inst.transform.position = obj.transform.position;
             obj.SetActive(false);
         }
     }

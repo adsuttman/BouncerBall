@@ -258,6 +258,7 @@ MonoBehaviour:
   pointer: {fileID: 6075106665196568159}
   scoreDisplay: {fileID: 6075106665196568160}
   tutorialText: {fileID: 1557778577}
+  ballDestroyParticles: {fileID: 6727136773204382473, guid: a09201acac66a674790d2e50781304a8, type: 3}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8
