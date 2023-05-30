@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695937065897247983, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 695937065897247983, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 695937065897247983, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 695937065897247983, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2172782125530996413, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
       propertyPath: collectible
       value: 
@@ -194,6 +210,22 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8571604729727643045, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8571604729727643045, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8571604729727643045, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8571604729727643045, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2172782125530996413, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
@@ -216,10 +248,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loseable: 1
   spawnCollectibles: 1
+  ball: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
+  gameOverCanvas: {fileID: 6075106665196568158}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8
   minSpawnY: -3
   maxSpawnY: 4
-  ball: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
   bonusInterval: 5
+--- !u!114 &6075106665196568158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 798783272274510304, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+  m_PrefabInstance: {fileID: 6075106665196568155}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648b8a7eed8483a419d70b2d8501fc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

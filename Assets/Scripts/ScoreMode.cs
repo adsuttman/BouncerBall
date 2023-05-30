@@ -9,7 +9,8 @@ public class ScoreMode : GameMode
 
      override public void GameOver()
     {
-        print("You got a score of " + score);
+        gameOverCanvas.SetScoreText("You got a score of " +  score);
+        base.GameOver();
     }
     override public void OnCollected()
     {

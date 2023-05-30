@@ -22,8 +22,8 @@ public class ScoreFrenzyMode : ScoreMode
 
     public override void GameOver()
     {
-        base.GameOver();
         StopCoroutine(timer);
+        base.GameOver();
     }
     IEnumerator BonusTimer()
     {

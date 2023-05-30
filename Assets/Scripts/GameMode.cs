@@ -25,6 +25,12 @@ public class GameMode : MonoBehaviour
         SpawnBall(Vector3.zero);
         
     }
+    private void OnDestroy()
+    {
+        Floor.OnFloorCollided -= Floor_OnFloorCollided;
+        Pointer.AllBallsDisabled -= Pointer_AllBallsDisabled;
+        Ball.Activated -= Ball_Activated;
+    }
 
     public virtual void Ball_Activated()
     {

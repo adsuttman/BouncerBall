@@ -16,9 +16,9 @@ public class TimerMode : GameMode
     }
     public override void GameOver()
     {
-        base.GameOver();
         StopCoroutine(timer);
-        print("You lasted for " + score + " seconds");
+        gameOverCanvas.SetScoreText("You lasted for " + score + " seconds");
+        base.GameOver();
     }
 
     IEnumerator ScoreTimer()
