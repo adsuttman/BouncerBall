@@ -250,6 +250,7 @@ MonoBehaviour:
   spawnCollectibles: 1
   ball: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
   gameOverCanvas: {fileID: 6075106665196568158}
+  pointer: {fileID: 6075106665196568159}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8
@@ -267,3 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648b8a7eed8483a419d70b2d8501fc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6075106665196568159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6075106666105926893, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+  m_PrefabInstance: {fileID: 6075106665196568155}
+  m_PrefabAsset: {fileID: 0}

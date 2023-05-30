@@ -9,6 +9,7 @@ public class GameMode : MonoBehaviour
     public bool spawnCollectibles = false;
     public Ball ball;
     public GameOver gameOverCanvas;
+    public GameObject pointer;
     [Header("Collectible Settings")]
     public Collectible collectible;
     public float minSpawnX = -8f;
@@ -80,6 +81,7 @@ public class GameMode : MonoBehaviour
 
     virtual public void GameOver()
     {
+        pointer.SetActive(false);
         if (gameOverCanvas != null)
         {
             gameOverCanvas.Show();

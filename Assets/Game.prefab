@@ -473,6 +473,7 @@ MonoBehaviour:
   spawnCollectibles: 0
   ball: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
   gameOverCanvas: {fileID: 798783272274510304}
+  pointer: {fileID: 6075106666105926893}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8
