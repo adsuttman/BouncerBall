@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &1782455897 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8805520177240786632, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+  m_PrefabInstance: {fileID: 6075106665196568155}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7bec92e53b8c34ea644fe4c0f96698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6075106665196568155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,6 +262,7 @@ MonoBehaviour:
   ball: {fileID: 8656718722589302697, guid: 500e7da348bf9d4439698a8850ecee91, type: 3}
   gameOverCanvas: {fileID: 6075106665196568158}
   pointer: {fileID: 6075106665196568159}
+  scoreDisplay: {fileID: 1782455897}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8

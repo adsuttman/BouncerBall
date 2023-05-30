@@ -26,6 +26,7 @@ public class TimerMode : GameMode
         for (; ; )
         {
             score++;
+            scoreDisplay.SetScoreText(score + " seconds");
             yield return new WaitForSeconds(1);
         }
         

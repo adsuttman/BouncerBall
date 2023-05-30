@@ -16,5 +16,6 @@ public class ScoreMode : GameMode
     {
         base.OnCollected();
         score += 1;
+        scoreDisplay.SetScoreText("" + score);
     }
 }
