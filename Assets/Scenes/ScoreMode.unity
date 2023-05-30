@@ -134,6 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7bec92e53b8c34ea644fe4c0f96698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &2014160625 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1213408586714854439, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+  m_PrefabInstance: {fileID: 6075106665196568155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6075106665196568155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,6 +169,10 @@ PrefabInstance:
     - target: {fileID: 2172782125530996413, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
       propertyPath: spawnCollectibles
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679881548656039869, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6075106665790112998, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
       propertyPath: m_RootOrder
@@ -263,6 +272,7 @@ MonoBehaviour:
   gameOverCanvas: {fileID: 6075106665196568158}
   pointer: {fileID: 6075106665196568159}
   scoreDisplay: {fileID: 1782455897}
+  tutorialText: {fileID: 2014160625}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8

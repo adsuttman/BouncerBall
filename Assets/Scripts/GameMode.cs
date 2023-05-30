@@ -11,6 +11,7 @@ public class GameMode : MonoBehaviour
     public GameOver gameOverCanvas;
     public GameObject pointer;
     public ScoreDisplay scoreDisplay;
+    public CanvasGroup tutorialText;
     [Header("Collectible Settings")]
     public Collectible collectible;
     public float minSpawnX = -8f;
@@ -38,6 +39,7 @@ public class GameMode : MonoBehaviour
     {
         print("Ball Activated");
         scoreDisplay.Show();
+        tutorialText.alpha = 0;
     }
 
     private void Pointer_AllBallsDisabled()

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!225 &1557778577 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 1213408586714854439, guid: ce71ac98fa75278419cf16cccdb9cbaf, type: 3}
+  m_PrefabInstance: {fileID: 6075106665196568155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6075106665196568155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +257,7 @@ MonoBehaviour:
   gameOverCanvas: {fileID: 6075106665196568158}
   pointer: {fileID: 6075106665196568159}
   scoreDisplay: {fileID: 6075106665196568160}
+  tutorialText: {fileID: 1557778577}
   collectible: {fileID: 5820112217536455740, guid: 86f27595c44aa4049bbe658ce12a04eb, type: 3}
   minSpawnX: -8
   maxSpawnX: 8
