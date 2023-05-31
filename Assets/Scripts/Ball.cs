@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
     {
         GameObject pointer = GameObject.Find("Pointer");
         script = pointer.GetComponent<Pointer>();
-        ArrayUtility.Add(ref script.balls, this);
+        script.balls.Add(this);
 
         rigid = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -34,6 +34,7 @@ public class Ball : MonoBehaviour
         {
             particles.Emit(Mathf.FloorToInt(speed));
         }
+
     }
     public void Activate()
     {

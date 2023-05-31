@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Pointer : MonoBehaviour
 {
     GameObject obj;
-    public Ball[] balls;
+    public List<Ball> balls;
     public float shoveForce = 10;
     public float shoveDelay = 15;
     float shoveTimer = 0;
@@ -114,7 +114,7 @@ public class Pointer : MonoBehaviour
                 inactiveCount++;
             }
         }
-        if (inactiveCount == balls.Length)
+        if (inactiveCount == balls.Count)
         {
             AllBallsDisabled();
         }
