@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Collectible : MonoBehaviour
 {
     new Collider2D collider;
     public LayerMask ballLayer;
-    public GameObject effectArea;
+    public GameObject[] spawnedObjects;
     public event Action collected;
 
     // Start is called before the first frame update
@@ -28,8 +29,12 @@ public class Collectible : MonoBehaviour
     {
         print("collected");
         collected();
-        GameObject inst = Instantiate(effectArea);
+        GameObject inst = Instantiate(GetSpawnable());
         inst.transform.position = transform.position;
         Destroy(gameObject);
+    }
+    GameObject GetSpawnable()
+    {
+        return spawnedObjects[Random.Range(0, spawnedObjects.Length)];
     }
 }

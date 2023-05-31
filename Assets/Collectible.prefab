@@ -117,4 +117,5 @@ MonoBehaviour:
   ballLayer:
     serializedVersion: 2
     m_Bits: 64
-  effectArea: {fileID: 2267107373683410810, guid: e17c8e55c6eb4ac4b98f9293e404bd0d, type: 3}
+  spawnedObjects:
+  - {fileID: 2267107373683410810, guid: e17c8e55c6eb4ac4b98f9293e404bd0d, type: 3}
