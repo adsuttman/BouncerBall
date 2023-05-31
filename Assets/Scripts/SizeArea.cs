@@ -16,15 +16,12 @@ public class SizeArea : MonoBehaviour
     {
         GameObject obj = collider.gameObject;
         Vector3 scale = obj.transform.localScale;
-        print(obj.name);
         if (grow)
         {
-            print("growing");
             obj.transform.localScale = ClampScale(scale + scaleAmount * Time.deltaTime);
         }
         else
         {
-            print("shrinking");
             obj.transform.localScale = ClampScale(scale - scaleAmount * Time.deltaTime);
         }
     }

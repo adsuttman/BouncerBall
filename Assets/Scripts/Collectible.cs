@@ -27,7 +27,6 @@ public class Collectible : MonoBehaviour
     }
     void onBallCollision()
     {
-        print("collected");
         collected();
         GameObject inst = Instantiate(GetSpawnable());
         inst.transform.position = transform.position;

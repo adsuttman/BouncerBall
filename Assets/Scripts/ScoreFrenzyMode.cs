@@ -29,7 +29,6 @@ public class ScoreFrenzyMode : ScoreMode
     {
         for(; ; )
         {
-            print("Bonus Spawn");
             base.SpawnCollectible();
             yield return new WaitForSeconds(bonusInterval);
         }

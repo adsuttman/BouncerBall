@@ -38,7 +38,6 @@ public class GameMode : MonoBehaviour
 
     public virtual void Ball_Activated()
     {
-        print("Ball Activated");
         scoreDisplay.Show();
         tutorialText.alpha = 0;
     }
