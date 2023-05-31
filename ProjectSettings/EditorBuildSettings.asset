@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: be2bd5c53edbded4f80d024b41c4de4e
+  - enabled: 1
+    path: Assets/Scenes/ZanyMode.unity
+    guid: 5d606e657c270a44bb0742fe8f7da26c
+  - enabled: 1
+    path: Assets/Scenes/ExtraZanyMode.unity
+    guid: 14f7bccb64e9a5648b249df140deb212
   m_configObjects: {}
